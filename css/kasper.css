@@ -29,9 +29,6 @@ ul {
     margin-left: auto;
     margin-right: auto;
 }
-:root {
-    --main-color: #19c8fe;
-}
 /* small screen **************************************************************************************/
 @media (min-width: 768px) {
     .container {
@@ -238,7 +235,6 @@ ul {
 .landing .bullets {
     position: absolute;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     bottom: 10px;
     left: 50%;
@@ -271,22 +267,15 @@ ul {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
-.services .container .main div {
-    padding: 20px;
-}
 .services .container .main i {
-    display: inline;
     font-size: 20px;
-    margin-right: 20px;
 }
 .services .container .main h3 {
-    display: inline;
     font-weight:700;
     color: var(--main-color)
 }
 .services .container .main p {
     margin-top: 30px;
-    margin-left: 55px;
     line-height: 1.8;
     color: #777;
 }
@@ -296,15 +285,14 @@ ul {
         grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
         gap: 20px 10px; 
     }
+    .services .container .description{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 40%;
+    }
     }
 @media (max-width: 767px) {
-        .services .container .main i {
-            display: block;
-            margin-bottom: 20px;
-        }
-        .services .container .main h3 {
-            display:block;
-        }
     .services .container .main {
         text-align: center;
     }
@@ -745,7 +733,6 @@ line-height: 1.8;
 }
 .pricing .content {
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
@@ -753,7 +740,7 @@ line-height: 1.8;
     text-align: center;
     background-color: #F5FFFA;
     padding-bottom: 20px;
-    flex-basis: 24%
+    flex-basis: 24%;
     margin-bottom: 15px;
 }
 @media (max-width: 1024px) {
